@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phone Catalog</title>
 
-  <!-- ✅ 1. базовый путь для GitHub Pages -->
   <base href="/react_phone-catalog/" />
 
-  <!-- ✅ 2. патч для путей /img/, /api/, /fonts/, /data/ -->
   <script>
     (function () {
       var BASE =
@@ -22,7 +20,6 @@
         return new URL(stripped, new URL(BASE, window.location.origin)).toString();
       }
 
-      // перехватываем fetch('/data/...') → '/react_phone-catalog/data/...'
       var origFetch = window.fetch.bind(window);
       window.fetch = function (input, init) {
         if (typeof input === "string" && ABS.test(input))
@@ -34,7 +31,6 @@
         return origFetch(input, init);
       };
 
-      // чиним src/href/srcset
       function fix(el, attr) {
         var val = el.getAttribute(attr);
         if (!val) return;
