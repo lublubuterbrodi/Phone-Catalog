@@ -1,135 +1,108 @@
-# Phone Catalog – Online Mobile Store
+# Phone Catalog
 
-This project is a modern single-page application for browsing a catalog of mobile phones.
-Users can explore a list of smartphones, view detailed product information, compare specifications and prices, add items to favorites or a shopping cart, and manage their selections with a clean and responsive interface.
-
----
-
-## Live Preview
-
-Add a link to the deployed version of your project.
-
-**Live Demo**
-
-Experience the live website: [Phone Catalog Demo](https://lublubuterbrodi.github.io/Phone-Catalog/)
-
-> ⚠️ Make sure the link is **publicly accessible**. Test it in incognito mode to verify functionality.
+Phone Catalog is a single-page web application where users can browse different smartphone models, view detailed specs, compare prices, and manage favorites and cart items.
+The project was developed as a React + TypeScript learning task with a focus on clean architecture, reusable components, and responsive UI.
 
 ---
 
-## Design Reference (If Applicable)
+## 🚀 Live Demo
 
-If the project is based on a specific design, include a link to the Figma file or design reference here.
+You can view the deployed version here:
 
-Example:
-
-- Figma Design: `https://www.figma.com/file/your-design-link`
+🔗 https://lublubuterbrodi.github.io/Phone-Catalog/
 
 ---
 
-## Technologies Used 🧰
+## 🎨 Design Reference
 
-List of the main technologies and frameworks used in the project.
+The layout is based on the course design mockup with several custom improvements and adjustments.
+(If needed, a Figma link can be added.)
+
+---
+
+## 🛠️ Technologies Used
 
 ### Core
 
-- **React (v18.x)** – UI library
-- **TypeScript (v5.x)** – Type safety
-- **SCSS (v1.x)** – Styling and component-based styles
+- **React** — main UI library
+- **TypeScript** — static typing and error prevention
+- **SCSS** — modular styling
 
-### State Management
+### Routing & State
 
-- **React Context / Custom Hooks** – Application state (cart, favorites, filters)
-  <!-- If you use Redux, replace the line above with:
-  - **Redux Toolkit (vX.X.X)** – Application state management
-  -->
+- **React Router** — multi-page navigation inside the SPA
+- **React Context** — global state for cart and favorites
+- **LocalStorage** — persistence across page reloads
 
-### UI/UX
+### Development
 
-- **React Router (v6.x)** – Client-side routing and navigation
-- **React Loading Skeleton / Custom Loader** – Loading states
-- **LocalStorage API** – Persistence for favorites and cart
-
-### Development & Deployment
-
-- **Vite (v4.x)** – Build tool and development server
-- **ESLint (v8.x)** – Code quality and linting
-- **GitHub Pages** – Hosting and deployment
+- **Vite** — fast development server and build tool
+- **ESLint** — code quality and formatting
+- **GitHub Pages** — deployment
 
 ---
 
-## Getting Started
-
-Include these instructions on how to set up the project locally.
+## ⚙️ Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Phone-Catalog.git
+git clone https://github.com/lublubuterbrodi/Phone-Catalog.git
 cd Phone-Catalog
-```
-
-Replace lublubuterbrodi with your GitHub username if you fork this project.
 
 ### 2. Install dependencies
-
 npm install
-
 # or
-
 yarn install
 
 ### 3. Run the project locally
-
 npm run dev
-
 # or
-
 yarn dev
 
-Open the URL shown in the terminal (usually http://localhost:5173) in your browser.
 
-## Features (optional)
+The app will be available at a URL similar to:
 
-Highlight key features or functionalities that make your project stand out.
+http://localhost:5173
+```
 
-### Features
+## ✨ Features
 
-- **Responsive Design**
-  Optimized for different screen sizes and devices, with breakpoints for popular widths (mobile, tablet, desktop).
+- **Responsive Layout**
+  Works smoothly on mobile, tablet, and desktop screens.
 
 - **Phone Catalog**
-  Browse a grid/list of phones with basic information such as name, image, price, and short description.
+  View a list of phone models with images, prices, and short descriptions.
 
 - **Product Details Page**
-  View detailed information for each phone: full description, specifications, price, and high-resolution images.
+  Displays full specifications, large product images, and additional info.
 
-- **Favorites**
-  Add and remove phones from a favorites list. Favorite items are persisted in localStorage, so they remain after page reloads.
+- **Favorites System**
+  Add/remove items from favorites. Data is saved in LocalStorage.
 
 - **Shopping Cart**
-  Add phones to a cart, update quantities, remove items, and see a summary of the total price and number of items.
+  Add items, update quantities, and see the total cost dynamically.
 
-- **Sorting**
-  Sort products by price (low–high / high–low), name (alphabetically), and possibly by new/old models.
+- **Sorting Options**
+  Sort items by price, alphabetical order, or release order.
 
 - **Filtering**
-  Filter phones by brand, category, or other parameters (e.g., price range, in stock).
+  Narrow down the catalog using various parameters (e.g., brand, price).
 
-- **Search**
-  Quickly find phones by name or part of the model name using a search input.
+- **Search Functionality**
+  Instantly find models by typing part of the name.
 
-- **Pagination / “Items per page”**
-  Navigate through large lists of phones with pagination or configurable items per page.
+- **Pagination / Items per Page**
+  Convenient navigation through larger lists.
 
-- **Navigation & Breadcrumbs**
-  Client-side routing between pages (home, catalog, favorites, cart, details). Breadcrumbs help users understand their current location in the app.
+- **Breadcrumb Navigation**
+  Helps users understand their location within the app.
 
 - **Sticky Header**
-  Keeps the main navigation visible while scrolling.
+  Keeps the navigation always accessible when scrolling.
 
 - **Scroll to Top Button**
-  Allows users to quickly return to the top of the page after scrolling through long lists.
+  Quick return to the top of the catalog page.
 
-- **Loaders & Skeletons**
-  Visual placeholders displayed while data is being fetched for a smoother user experience.
+- **Skeleton Loaders**
+  Smooth loading experience when fetching data.
